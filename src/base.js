@@ -13,7 +13,7 @@
 				console.log('RECEIVED MESSAGE FROM IFRAME', msg);
 			} catch(e) {}
 			var botd = jQuery('.botd-iframe');
-			if (msg === 'GO TO TOP') {
+			if (msg.message === 'GO TO TOP') {
 				jQuery('html,body').animate({
 					scrollTop: botd.length && botd.offset() && botd.offset().top ? botd.offset().top : 0
 				}, 500);
