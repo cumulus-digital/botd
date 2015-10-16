@@ -10,7 +10,7 @@
 		tolerance: 5,
 		messageCallback: function(msg) {
 			try {
-				console.log('RECEIVED MESSAGE FROM IFRAME');
+				console.log('RECEIVED MESSAGE FROM IFRAME', msg);
 			} catch(e) {}
 			var botd = jQuery('.botd-iframe');
 			if (msg === 'GO TO TOP') {
