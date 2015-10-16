@@ -19,5 +19,11 @@
 <script src="http://cumulus.jsxbabeotd.dellsports.com/jsx-loader/" type="text/javascript"></script>
 <script src="https://cdn.rawgit.com/davidjbradshaw/iframe-resizer/master/js/iframeResizer.contentWindow.min.js"></script>
 
+<script>
+$(window).unload(function() {
+	window.parentIFrame.sendMessage('GO TO TOP');
+});
+</script>
+
 </body>
 </html>
