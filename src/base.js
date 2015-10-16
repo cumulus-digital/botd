@@ -9,8 +9,11 @@
 		heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
 		tolerance: 5,
 		messageCallback: function(msg) {
+			try {
+				console.log('RECEIVED MESSAGE FROM IFRAME');
+			} catch(e) {}
 			var botd = jQuery('.botd-iframe');
-			if (msg == 'GO TO TOP') {
+			if (msg === 'GO TO TOP') {
 				jQuery('html,body').animate({
 					scrollTop: botd.length && botd.offset() && botd.offset().top ? botd.offset().top : 0
 				}, 500);
